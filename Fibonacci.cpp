@@ -10,14 +10,31 @@ int main(){
 	int n1 = 1;
 	int n2 = 0;
 	int temp;
-	if num <= 2{
+	if(num<=2 && num > 0){
 		for(int i = 0; i < num; i++){
-			fib[i] = 1;
+			fib[i]=1;
+		}
+		for(int i = 0; i < num; i++){
+			cout << fib[i];
+			if(i+1 != num)
+				cout << ", ";
+		}
+	}
+	else if(num>2){
+		fib[0]=1;
+		fib[1]=1;
+		for(int i = 2; i<num;i++){
+			fib[i] = fib[i-1] + fib[i-2];
+		
+		}
+		for(int i = 0; i < num; i++){
+			cout << fib[i];
+			if(i+1 != num)
+				cout << ", ";
 		}
 	}
 	else{
-		for(int i = 1; i < num; i++){
-			
-		}
+		cout << "Please enter a number larger than zero..." << endl;
 	}
+	return 0;
 }

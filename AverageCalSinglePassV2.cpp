@@ -11,12 +11,12 @@ int main(){
 	int pass = 0;
 	string score;
 	cin >> score;
-	while(score != ""){
-		if(score >= int(60)){
+	while(score != "Y"){
+		if(static_cast<int>(score) >= 60){
 			pass++;
 		}
 		total++;
-		sum += int(score);
+		sum += static_cast<int>(score);
 		cout << "Enter \'Y\' if you want to calculate average score and how many student passed.";
 		cin >> score;
 	}
