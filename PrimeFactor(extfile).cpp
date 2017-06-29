@@ -1,5 +1,4 @@
 #include<iostream>
-#include "isPrime.h"
 #include "isPrime.cpp"
 
 using namespace std;
